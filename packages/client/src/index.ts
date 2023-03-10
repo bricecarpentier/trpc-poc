@@ -1,5 +1,5 @@
 import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
-import type { AppRouter } from "@brice/trpc-test-server";
+import { type AppRouter, UserId } from "@brice/trpc-test-server";
 import { pipe } from "fp-ts/lib/function.js";
 import {
   tryCatch,
@@ -18,8 +18,8 @@ const trpc = createTRPCProxyClient<AppRouter>({
 
 const msg = await pipe(
   tryCatch(
-    () => trpc.GetUserById.query("user-1"),
-    () => "something bad occured"
+    () => trpc.GetUserById.query(UserId("user-1")),
+    (reason) => `something bad occured: ${reason}`
   ),
   teMap(
     oFold(

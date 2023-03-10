@@ -1,4 +1,4 @@
-import type { Decoder } from "io-ts/lib/Decoder.js";
+import { type Decoder, draw } from "io-ts/lib/Decoder.js";
 import { isRight } from "fp-ts/lib/Either.js";
 
 export const InputFromDecoder =
@@ -8,5 +8,5 @@ export const InputFromDecoder =
     if (isRight(decoded)) {
       return decoded.right;
     }
-    throw decoded.left;
+    throw new Error(draw(decoded.left));
   };
