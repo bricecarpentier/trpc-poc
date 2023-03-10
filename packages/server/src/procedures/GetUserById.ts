@@ -1,8 +1,7 @@
 import { findFirst } from "fp-ts/lib/Array.js";
 import { pipe } from "fp-ts/lib/function.js";
-import { string } from "io-ts/lib/Decoder.js";
-import { User, UserId } from "../domain";
-import { InputFromDecoder } from "../InputFromDecoder.js";
+import { User, UserId, UserIdCodec } from "../domain/index.js";
+import { InputFromDecoder as ifc } from "../InputFromDecoder.js";
 import { RuntimeConfig } from "../RuntimeConfig.js";
 
 const users = [
@@ -11,7 +10,7 @@ const users = [
 ];
 
 export const GetUserById = (t: RuntimeConfig) =>
-  t.procedure.input(InputFromDecoder(string)).query((req) =>
+  t.procedure.input(ifc(UserIdCodec)).query((req) =>
     pipe(
       users,
       findFirst((u) => u.id === req.input)
