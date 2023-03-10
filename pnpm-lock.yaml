@@ -16,6 +16,7 @@ importers:
       '@trpc/client': ^10.14.1
       '@trpc/server': ^10.14.1
       '@tsconfig/recommended': ^1.0.2
+      '@types/node': ^18.15.0
       fp: ^0.1.0
       fp-ts: ^2.13.1
       io-ts: ^2.2.20
@@ -24,6 +25,7 @@ importers:
       '@brice/trpc-test-server': link:../server
       '@trpc/client': 10.14.1_@trpc+server@10.14.1
       '@trpc/server': 10.14.1_jx5i2ba3343kmtz67eu2ntqdtu
+      '@types/node': 18.15.0
       fp: 0.1.0
       fp-ts: 2.13.1
       io-ts: 2.2.20_fp-ts@2.13.1
@@ -35,6 +37,7 @@ importers:
     specifiers:
       '@trpc/server': ^10.14.1
       '@tsconfig/recommended': ^1.0.2
+      '@types/node': ^18.15.0
       fp: ^0.1.0
       fp-ts: ^2.13.1
       io-ts: ^2.2.20
@@ -46,6 +49,7 @@ importers:
       io-ts: 2.2.20_fp-ts@2.13.1
     devDependencies:
       '@tsconfig/recommended': 1.0.2
+      '@types/node': 18.15.0
       typescript: 4.9.5
 
 packages:
@@ -66,6 +70,9 @@ packages:
   /@tsconfig/recommended/1.0.2:
     resolution: {integrity: sha512-dbHBtbWBOjq0/otpopAE02NT2Cm05Qe2JsEKeCf/wjSYbI2hz8nCqnpnOJWHATgjDz4fd3dchs3Wy1gQGjfN6w==}
     dev: true
+
+  /@types/node/18.15.0:
+    resolution: {integrity: sha512-z6nr0TTEOBGkzLGmbypWOGnpSpSIBorEhC4L+4HeQ2iezKCi4f77kyslRwvHeNitymGQ+oFyIWGP96l/DPSV9w==}
 
   /fp-ts/2.13.1:
     resolution: {integrity: sha512-0eu5ULPS2c/jsa1lGFneEFFEdTbembJv8e4QKXeVJ3lm/5hyve06dlKZrpxmMwJt6rYen7sxmHHK2CLaXvWuWQ==}

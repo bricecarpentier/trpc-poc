@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +20,7 @@
     "@brice/trpc-test-server": "../server",
     "@trpc/client": "^10.14.1",
     "@trpc/server": "^10.14.1",
+    "@types/node": "^18.15.0",
     "fp": "^0.1.0",
     "fp-ts": "^2.13.1",
     "io-ts": "^2.2.20"
