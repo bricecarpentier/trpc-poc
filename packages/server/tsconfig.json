@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/recommended",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "target": "ESNext",
+    "lib": ["ESNext"]
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

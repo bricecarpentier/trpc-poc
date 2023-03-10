@@ -1,0 +1,19 @@
+{
+  "name": "@brice/trpc-test",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm -r --if-present --parallel tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "pnpm": {
+    "patchedDependencies": {
+      "@trpc/server@10.14.1": "patches/@trpc__server@10.14.1.patch"
+    }
+  }
+}

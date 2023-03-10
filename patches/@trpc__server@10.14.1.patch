@@ -1,0 +1,26 @@
+diff --git a/dist/core/index.d.ts b/dist/core/index.d.ts
+index ff290eb1221f994f1ce14d20d92d900dc7657e90..6d0efa91e28864d372853992af32eb2299458cff 100644
+--- a/dist/core/index.d.ts
++++ b/dist/core/index.d.ts
+@@ -1,4 +1,4 @@
+-export type { AnyRouter, ProcedureRecord, ProcedureRouterRecord, CreateRouterInner, Router, } from './router';
++export type { AnyRouter, AnyRouterDef, ProcedureRecord, ProcedureRouterRecord, CreateRouterInner, Router, RouterDef} from './router';
+ export { callProcedure } from './router';
+ export type { Procedure, AnyProcedure, AnyQueryProcedure, AnyMutationProcedure, AnySubscriptionProcedure, ProcedureParams, ProcedureArgs, ProcedureOptions, } from './procedure';
+ export type { inferParser } from './parser';
+diff --git a/src/core/index.ts b/src/core/index.ts
+index 52f0b55fdaaf3af0f6d73bcf2cfcb14459c88e4a..53214e5789fcc728b71c2e5c9c23ef7445621f27 100644
+--- a/src/core/index.ts
++++ b/src/core/index.ts
+@@ -1,9 +1,11 @@
+ export type {
+   AnyRouter,
++  AnyRouterDef,
+   ProcedureRecord,
+   ProcedureRouterRecord,
+   CreateRouterInner,
+   Router,
++  RouterDef,
+ } from './router';
+ export { callProcedure } from './router';
+ export type {
